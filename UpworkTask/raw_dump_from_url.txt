@@ -1,0 +1,3600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Gazette New Companies." />
+<meta name="keywords" content="irish, ireland, company, information, business, director info, irish company documents, company information, company registration office, company accounts, registered address, documents, business information, company data, company search, research, business directory, industry sectors, suppliers, commercial, industrial, financial, accounts, legal reference, legal notices, articles, b10, company name, company number, business information resource tool, suppliers, creditors, transport, haulage, registered business number, shareholders, b2, g1, special resolution, liquidator, receiver, annual return, marc o'connor, sean kavanagh, company, formations, international, vision, net, cfi online, insolvency notices, judgments, judgements, creditor meetings, new companies, insolvency information, liquidations, business barometer, Credit Reports" />
+<title>Gazette New Companies - Irish Company Info - Vision-Net</title>
+<link href="/assets/ico/favicon.ico" rel="shortcut icon" />
+
+<link title="Vision-net.ie - Irish Company Search" href="/opensearch.xml" type="application/opensearchdescription+xml" rel="search"/>
+<!--[if gte IE 8]>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600,400,300' rel='stylesheet' type='text/css'>
+<![endif]-->
+<![if !IE]>
+<link href='/assets/css/fonts.css' rel='stylesheet' type='text/css'>
+<![endif]>
+
+<link href="/assets/css/style.min.css?v=3" rel="stylesheet">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.jsp" />
+<!--[if lt IE 8]>
+	<link href="/assets/css/bootstrap-ie-7.css?v=3" rel="stylesheet"/>
+	<link href="/assets/css/bootstrap-ie-6.css?v=3" rel="stylesheet"/>
+<![endif]-->
+
+<script src="/assets/js/scripts.min.js?v=32"></script>
+
+<!-- solve some conflicts with jquery ui and bootstrap -->
+<script type="text/javascript">
+try {
+	$(function() {
+		$('input, textarea').placeholder();
+	});
+
+if (top != self) top.location.href = location.href;
+
+} catch ( err ) { /* Do nothing */ }
+</script>
+<!-- stuff for the company reports -->
+<noscript>
+<style type="text/css">
+	.hidden-item{
+		display:block !important;
+	}
+</style>
+</noscript>
+<style type="text/css">
+	.tab0-8-title-row h1{
+		font-size: 40px;
+		text-align: center;
+		color: rgb(255, 255, 255);
+		margin-bottom: 20px;
+	}
+	.tab0-8-title-row #header-box {
+		border-top: 2px solid rgb(255, 255, 255);
+		border-bottom: 2px solid rgb(255, 255, 255);
+		margin-top: 13%;
+	}
+	.tab0-8-title-row h4, .tab0-8-title-row h3{
+		color: rgb(255, 255, 255);
+		text-align: center;
+	}
+	.tab0-8-title-row #prime{
+		background-image: url("/images/prime-logo-1.gif");
+		background-repeat: no-repeat;
+		background-position: top;
+		height: 90px;
+		margin: 25px;
+	}
+	.tab0-8-title-row ul.nav.nav-pills li.active:before{
+		content: "";
+		width: 0;
+		height: 0;
+		border-left: 15px solid rgba(0, 0, 0, 0);
+		border-right: 15px solid rgba(0, 0, 0, 0);
+		border-bottom: 20px solid rgb(240, 172, 76);
+		position: absolute;
+		left: 46%;
+		top: -15px;
+	}
+	.tab0-8-title-row .marketing-tabs{
+		width: 220px;
+		margin: 50px auto;
+	}
+	.tab0-7-title-row{
+		margin-top: 80px;
+	}
+	.tab0-7-title-row h3{
+		color: rgb(255, 255, 255);
+		text-align: center;
+	}
+	.tab0-7-title-row h1{
+		color: rgb(255, 255, 255);
+		text-align: center;
+		font-size: 48px
+	}
+</style>
+
+<script type="text/javascript">
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-6603293-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$('.navbar-toggle').click(function () {
+		$('.navbar-nav').toggleClass('slide-in');
+		$('.side-body').toggleClass('body-slide-in');
+		$('#search').removeClass('in').addClass('collapse').slideUp(200);
+	});
+	$('#search-trigger').click(function () {
+		$('.navbar-nav').removeClass('slide-in');
+		$('.side-body').removeClass('body-slide-in');
+	});
+	$('.telephone img').tooltip();
+	$(".validate-terms").validate({
+		rules: {
+			agree: {
+				required: true
+			}
+		},
+		highlight: function(element) {
+			$(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+		},
+		success: function(element) {
+			element.closest('.form-group').removeClass('has-error').addClass('has-success');
+			element.closest('label').remove();
+		}
+	});
+
+	$(".search-button").on("click",function(){
+		window.location.href = getEnterLink();
+	});
+});
+
+
+function goToElement(elem, elemIdx, elemText){
+	try {
+		var marginTop = 110;
+		if ('h4'==elem){
+			marginTop = 130;
+		}
+		if ($('#report-toolbar').css('margin-top') == '0px'){
+			marginTop += 40;
+		}
+		var elemOffset = $(elem+":contains('" + elemText + "'):eq("+elemIdx+")").offset().top;
+		window.scrollTo(0,elemOffset - marginTop);
+	}catch (ignore){}
+}
+
+function hideCookieDiv() {
+	try {
+		var toggleStyle = document.getElementById('cookie-policy').style;
+		toggleStyle.display = 'none';
+	} catch (ignore) { }
+}
+
+function setCookieCookie() {
+	try {
+		var exdate=new Date();
+		exdate.setDate(exdate.getDate() + 60);
+		var c_value=escape("accept") + "; expires="+exdate.toUTCString() + ";path=/;" ;
+		document.cookie="VisionNetCookieCookie=" + c_value;
+	} catch (ignore) { }
+}
+
+/*for resizing iframes on pages. maybe not IE9 because of rendering problems*/
+var lastWindowHeight = $(window).height();
+var lastWindowWidth = $(window).width();
+function setIframeHeight(frameName){
+	var myNav = navigator.userAgent.toLowerCase();
+	var ie = (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+
+	if(ie != 9 || ie == false){
+		var height = parseInt($(window).height()-($("div.navbar.navbar-default.logged-out-navbar.navbar-fixed-top.hidden-print").height()+$("div.page-header.clearfix.page-title").outerHeight()+50));
+		if ($(document).find('.btn-toolbar').size() > 0){
+		    height -= 20;
+		}
+		$("#"+frameName).css({"height":height+"px"});
+
+		$(window).resize(function() {
+			//confirm window was actually resized
+			if($(window).height()!=lastWindowHeight || $(window).width()!=lastWindowWidth){
+				//set this windows size
+				lastWindowHeight = $(window).height();
+				lastWindowWidth = $(window).width();
+				setIframeHeight(frameName);
+			}
+		});
+	}
+}
+
+</script>
+
+</head>
+<body>
+<div class="navbar navbar-default logged-out-navbar navbar-fixed-top hidden-print">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="http://www.vision-net.ie/"><img alt="Vision-Net" class="logo" src="/assets/img/logo.jpg" style="margin-top:0;"/></a>
+			</div>
+		<div class="navbar-collapse collapse text-center blueBackground" style="padding-right:0;border-top:none;">
+			<div>
+				<div class="search-box">
+						<div class="input-group">
+							<input id="searchAll" type="text" class="form-control search-input" name="searchAll" placeholder="Search Every Irish Company, Director, Business" onblur="delayedClearList('searchAll');" onkeyup="processKey(event, 'searchAllFree');" onkeypress="return selectItem(event);" autocomplete="off" value="">
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-warning" onclick="window.location.href = getEnterLink()"><span class="glyphicon glyphicon-search"></span></button>
+							</span>
+						</div>
+						<div onmouseover="style.cursor='pointer'" class="search_suggest search-box-results" id="search_suggest_all"></div>
+					</div>
+					<ul class="nav navbar-nav nav-headerLO uppercase">
+<li class="hire"><a href="/news/" >Blog</a></li>
+						<li><a href="/register.jsp">Join Up</a></li>
+						<li><a href="/topupnli.jsp">Top-Up</a></li>
+						<li><a href="http://www.vision-net.ie/contactUs.jsp">About</a></li>
+						<li class="nav-button"><form action="https://www.vision-net.ie/loginNoFrame.jsp"><button type="submit" class="btn btn-warning btn-login">LOGIN</button></form></li>
+						</ul>
+				</div>
+		</div>
+	</div>
+	<div id="cookie-policy" class="blueBackground"><div class="alert clearfix text-center" style="margin-bottom:0;padding:5px;border:none;border-top:1px solid #F0F6FA;border-radius:0;"><p style="color:white;"><span class="glyphicon glyphicon-info-sign"></span> We use cookies to ensure the best user experience, enabling you to login and view detailed company information. <a href="http://www.vision-net.ie/privacy.jsp#cookies" style="color:white;text-decoration:underline;">See our Cookie Policy</a>. <a role="button" class="btn btn-warning btn-sm" href="javascript:void(0);" onclick="hideCookieDiv(); setCookieCookie();">Hide this message</a></p></div></div>
+</div>
+<div class="container" id="barometer"><div class="surround"><div class="row"><div class="col-lg-8">
+				<div class="page-header">
+						<h1>Company <span class="text-primary">Set Ups</span></h1>
+					</div>
+					<p>Below is a list of new <b>Company Set Ups</b>.</p>
+					<style type="text/css">
+.custom_INFO{
+	padding-left:0%;
+	padding-right:0%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+.left_INFO{
+	padding-left:0%;
+	text-align: left;
+}
+
+.right_INFO{
+	padding-right: 0%;
+	text-align: right;
+}
+
+.barometer_logo{
+	vertical-align: text-bottom;
+}
+</style>
+<div class="col-sm-12 custom_INFO">
+	<div class="col-sm-6 left_INFO">
+		<p><img class="barometer_logo" src="/assets/img/Optimized-vn-icon-01.png" alt="">&nbsp;&nbsp;By Business Barometer.</p>
+	</div>
+	<div class="col-sm-6 right_INFO">
+		<h5><small>Issue 337 (Week Ending 04/08/2017)</small></h5>
+	</div>
+</div>
+
+
+<table class="table grey-header">
+							<thead>
+								<tr>
+									<th>Company Number</th>
+									<th>Company Name</th>
+									<th>Partial Address</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="dateLine">
+									<td colspan="3"><a id="2457969"></a><h4>3rd of August, 2017</h4></td>
+								</tr>
+
+								<tr class="bootstrap-row-background">
+									<td style="text-align:right">609095</td>
+									<td>
+										<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Nacrum-Limited-609095">Nacrum Limited</a></td>
+									<td>Co. Cork</td>
+								</tr>
+						<tr>
+						<td style="text-align:right">609096</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Segment-Technologies-Ireland-Limited-609096">Segment Technologies Ireland, Limited</a></td>
+							<td>Dublin 1</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609097</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Health-And-Marketing-Agency-Limited-609097">Health & Marketing Agency Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609098</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Hollybrook-Landscapes-Limited-609098">Hollybrook Landscapes Limited</a></td>
+							<td>Dublin 3</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609099</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Sports-Direct-And-Leisure-Limited-609099">Sports Direct and Leisure Limited</a></td>
+							<td>Dublin 24, D24 Ec84</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609100</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Sharon-Hogan-Consulting-Limited-609100">Sharon Hogan Consulting Limited</a></td>
+							<td>Co Limerick</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609101</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Hdf-Maritime-Limited-609101">Hdf Maritime Limited</a></td>
+							<td>Co Meath</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609102</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Loxias-Limited-609102">Loxias Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609103</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Automotive-Components-Supply-Limited-609103">Automotive Components Supply Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609104</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Falcon-Business-Consultants-Limited-609104">Falcon Business Consultants Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609105</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Maritime-Professional-Services-Limited-609105">Maritime Professional Services Limited</a></td>
+							<td>Dublin 5</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609106</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Family-Intervention-And-Consultancy-Service-Limited-609106">Family Intervention & Consultancy Service Limited</a></td>
+							<td>Waterford</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609107</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Pkk-Medical-Limited-609107">Pkk Medical Limited</a></td>
+							<td>Co. Limerick</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609108</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Cremorgan-Farms-Limited-609108">Cremorgan Farms Limited</a></td>
+							<td>Co. Laois</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609109</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Tsubaki-Limited-609109">Tsubaki Limited</a></td>
+							<td>Co Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609110</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Procurement-Transformation-Institute-Designated-Activity-Company-609110">Procurement Transformation Institute Designated Activity Company</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609111</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Deecal-Contracts-Limited-609111">Deecal Contracts Limited</a></td>
+							<td>Co. Meath</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609112</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Sm-And-Sons-Transport-Limited-609112">S.M. & Sons Transport Limited</a></td>
+							<td>Co. Louth</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609113</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Aemotion-Limited-609113">Aemotion Limited</a></td>
+							<td>Co Waterford</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609114</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Adseal-Limited-609114">Adseal Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609115</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Jbear-Films-Limited-609115">Jbear Films Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609116</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Tricolour-Aviation-Limited-609116">Tricolour Aviation Limited</a></td>
+							<td>Co Dublin</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609117</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Collaborative-Change-Partners-Limited-609117">Collaborative Change Partners Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609118</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Superior-Corporate-Accommodation-Limited-609118">Superior Corporate Accommodation Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609119</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Wizzr-Technologies-Limited-609119">Wizzr Technologies Limited</a></td>
+							<td>Co. Louth</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609120</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/James-Small-Limited-609120">James Small Limited</a></td>
+							<td>Dublin 4</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609121</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Perfect-Pieces-Limited-609121">Perfect Pieces Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609122</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Black-Lion-Global-Leasing-Limited-609122">Black Lion Global Leasing Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609123</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Anber-Geotechnical-Services-Limited-609123">Anber Geotechnical Services Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609124</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Crosskeys-Plant-Limited-609124">Crosskeys Plant Limited</a></td>
+							<td>Co Cavan</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609125</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Alopa-Trans-Limited-609125">Alopa Trans Limited</a></td>
+							<td>Waterford</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609126</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Food-Fitness-Fertility-Limited-609126">Food Fitness Fertility Limited</a></td>
+							<td>Co. Galway</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609127</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Under-The-Fold-Limited-609127">Under the Fold Limited</a></td>
+							<td>Dublin 12</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609128</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ingen-Capital-Limited-609128">Ingen Capital Limited</a></td>
+							<td>Dublin 24</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609129</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Nawa-Healthcare-Limited-609129">Nawa Healthcare Limited</a></td>
+							<td>Dublin 15</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609130</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ingen-Brands-Limited-609130">Ingen Brands Limited</a></td>
+							<td>Dublin 24</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609131</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Evolution-Entertainment-Limited-609131">Evolution Entertainment Limited</a></td>
+							<td>Dublin 24</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609132</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Le-Bon-Marche-Limited-609132">Le Bon Marché Limited</a></td>
+							<td>Dublin 24</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609133</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Emt-Properties-Limited-609133">Emt Properties Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609134</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Hca-And-Carer-Ireland-Limited-609134">Hca and Carer Ireland Limited</a></td>
+							<td>Co. Kildare</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609135</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Organic-Lands-Holdings-Limited-609135">Organic Lands Holdings Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609136</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Liquid-Collective-Limited-609136">Liquid Collective Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609137</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Mitaires-Landmark-Limited-609137">Mitaires Landmark Limited</a></td>
+							<td>Dublin 7</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609138</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Srm-Technology-Limited-609138">Srm Technology Limited</a></td>
+							<td>Dublin 16</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609139</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Knk-Apparel-Limited-609139">Knk Apparel Limited</a></td>
+							<td>Wexford</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609140</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Bg-Bay-Limited-609140">Bg Bay Limited</a></td>
+							<td>Dublin 13</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609141</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Automotive-Assistance-Limited-609141">Automotive Assistance Limited</a></td>
+							<td>Wexford</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609142</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Oi-Organic-Italian-Hairdressing-Limited-609142">Oi Organic Italian Hairdressing Limited</a></td>
+							<td>Dublin 18</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609143</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Classic-Sheds-Limited-609143">Classic Sheds Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609144</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Idesign-Gold-Limited-609144">Idesign Gold Limited</a></td>
+							<td>Dublin 7</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609145</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Vms-Technology-Limited-609145">Vms Technology Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609146</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Rynzac-Limited-609146">Rynzac Limited</a></td>
+							<td>Co. Westmeath</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609147</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Kilgarvan-Plastering-Limited-609147">Kilgarvan Plastering Limited</a></td>
+							<td>Co. Kerry</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609148</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Miralles-Limited-609148">Miralles Limited</a></td>
+							<td>Dublin 4</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609149</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Erecura-Recruitment-Limited-609149">Erecura Recruitment Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609150</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Pihu-Technologies-Limited-609150">Pihu Technologies Limited</a></td>
+							<td>Dublin 7</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609151</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Bmcn-Construction-Limited-609151">Bmcn Construction Limited</a></td>
+							<td>Galway</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609152</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Predictive-Fertility-Limited-609152">Predictive Fertility Limited</a></td>
+							<td>Co. Meath</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609153</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Beaumont-Park-Clinic-Limited-609153">Beaumont Park Clinic Limited</a></td>
+							<td>Co. Meath</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609154</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Newpark-Veterinary-Limited-609154">Newpark Veterinary Limited</a></td>
+							<td>Sligo, F91 Xe8e</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609155</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Trs-Productions-Designated-Activity-Company-609155">Trs Productions Designated Activity Company</a></td>
+							<td>Dublin 6</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609156</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Evs-Medic-Limited-609156">Evs Medic Limited</a></td>
+							<td>Co. Louth</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609157</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Santiago-Capital-Designated-Activity-Company-609157">Santiago Capital Designated Activity Company</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609158</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Beechlawn-Taverns-Limited-609158">Beechlawn Taverns Limited</a></td>
+							<td>Dublin 17</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609159</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ronanto-Chemicals-Unlimited-Company-609159">Ronanto Chemicals Unlimited Company</a></td>
+							<td>Dublin 22</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609160</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Sunni-Medical-Limited-609160">Sunni Medical Limited</a></td>
+							<td>Dublin 6</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609161</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Resi-Lutions-Specialist-Resin-Flooring-Contractors-Limited-609161">Resi-Lutions (Specialist Resin Flooring Contractors) Limited</a></td>
+							<td>Co. Kildare</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609162</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ips-Integrated-Project-Services-Ireland-Limited-609162">Ips-Integrated Project Services (Ireland) Limited</a></td>
+							<td>Dublin 4</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609163</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Avonlee-Food-Distribution-Limited-609163">Avonlee Food Distribution Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609164</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Lince-Aviation-Limited-609164">Lince Aviation Limited</a></td>
+							<td>Co Dublin</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609165</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Chapman-Construction-Services-Limited-609165">Chapman Construction Services Limited</a></td>
+							<td>Co. Carlow</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609166</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Master-Safety-Training-At-Work-Limited-609166">Master Safety Training At Work Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609167</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Murphy-Specialist-Sealing-Services-Limited-609167">Murphy Specialist Sealing Services Limited</a></td>
+							<td>Dublin 10</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609168</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Prophecy-Labs-Limited-609168">Prophecy Labs Limited</a></td>
+							<td>Dublin 6w</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609169</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Sunny-House-Chinese-Restaurant-Limited-609169">Sunny House Chinese Restaurant Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609170</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Gallahues-Bar-And-Restaurant-Ballylanders-Limited-609170">Gallahues Bar & Restaurant Ballylanders Limited</a></td>
+							<td>Co. Limerick</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609171</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Coralstown-Holdings-Scg-Limited-609171">Coralstown Holdings Scg Limited</a></td>
+							<td>Dublin 14</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609172</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Meiyu-Taxi-Company-Limited-609172">Meiyu Taxi Company Limited</a></td>
+							<td>Dublin 11</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609173</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/The-Coffee-Shot-Limited-609173">The Coffee Shot Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609174</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Rosros-Limited-609174">Rosros Limited</a></td>
+							<td>Limerick</td>
+						</tr>
+						<tr class="dateLine">
+								<td colspan="3"><a id="2457968"></a><h4>2nd of August, 2017</h4></td>
+							</tr>
+							<tr class="bootstrap-row-background">
+						<td style="text-align:right">609023</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Patientia-Limited-609023">Patientia Limited</a></td>
+							<td>Waterford</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609024</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/All-Seasons-Plant-And-Agri-Limited-609024">All Seasons Plant and Agri Limited</a></td>
+							<td>Co. Kilkenny</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609025</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Tinesin-Limited-609025">Tinesin Limited</a></td>
+							<td>Cork Ireland</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609026</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Wayne-Issuer-Designated-Activity-Company-609026">Wayne Issuer Designated Activity Company</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609027</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Brew-Lab-Limited-609027">Brew Lab Limited</a></td>
+							<td>Dublin 7</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609028</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Rde-Electrical-Engineering-Limited-609028">Rde Electrical Engineering Limited</a></td>
+							<td>Thurles, E41 V4p2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609029</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Free-West-Media-Limited-609029">Free West Media Limited</a></td>
+							<td>Co. Clare</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609030</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Niall-Conaty-Carpentry-Limited-609030">Niall Conaty Carpentry Limited</a></td>
+							<td>Cavan, A82p961</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609031</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Melluate-Unlimited-Company-609031">Melluate Unlimited Company</a></td>
+							<td>Co. Galway</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609032</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Quilstar-Unlimited-Company-609032">Quilstar Unlimited Company</a></td>
+							<td>Co. Galway</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609033</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Carbarine-Unlimited-Company-609033">Carbarine Unlimited Company</a></td>
+							<td>Co. Galway</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609034</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Cms-Legal-Services-Limited-609034">Cms Legal Services Limited</a></td>
+							<td>Dublin 15</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609035</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Smokey-Joes-Limited-609035">Smokey Joes Limited</a></td>
+							<td>Co. Limerick</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609036</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Plenary-Io-Limited-609036">Plenary Io Limited</a></td>
+							<td>Dublin 1</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609037</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Sumera-Limited-609037">Sumera Limited</a></td>
+							<td>Meath</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609038</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Cb-Studio-Limited-609038">Cb Studio Limited</a></td>
+							<td>Dublin 7</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609039</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Future-Creative-Limited-609039">Future Creative Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609040</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Replakon-Limited-609040">Replakon Limited</a></td>
+							<td>Co. Tipperary</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609041</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Oxygen-Creative-Limited-609041">Oxygen Creative Limited</a></td>
+							<td>Co. Wicklow</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609042</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Dublin-Commercial-Vehicle-Repairs-Limited-609042">Dublin Commercial Vehicle Repairs Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609043</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Paysafe-Finance-Ireland-Limited-609043">Paysafe Finance (Ireland) Limited</a></td>
+							<td>Dublin 4</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609044</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Noppera-Limited-609044">Noppera Limited</a></td>
+							<td>Co Dublin</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609045</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Kilmalogue-Farm-Limited-609045">Kilmalogue Farm Limited</a></td>
+							<td>Co. Tipperary</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609046</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Green-Olive-Store-Limited-609046">Green Olive Store Limited</a></td>
+							<td>Dublin 15</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609047</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Burred-Entertainment-Limited-609047">Burred Entertainment Limited</a></td>
+							<td>Dublin 12</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609048</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Childers-Road-Food-Centre-Limited-609048">Childers Road Food Centre Limited</a></td>
+							<td>Co. Clare</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609049</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Soleire-Renewables-Holdings-Limited-609049">Soleire Renewables Holdings Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609050</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ppr-Digital-Associates-Limited-609050">Ppr Digital Associates Limited</a></td>
+							<td>Co Dublin</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609051</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Bobozz-Limited-609051">Bobozz Limited</a></td>
+							<td>Co. Kerry</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609052</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/The-Square-Asian-Street-Food-Limited-609052">The Square Asian Street Food Limited</a></td>
+							<td>Dublin 24, D24dwv9</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609053</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Izu-Anioma-Ireland-609053">Izu Anioma Ireland</a></td>
+							<td>Dublin 10</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609054</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Odonnell-Capital-Partners-Limited-609054">O'Donnell Capital Partners Limited</a></td>
+							<td>Dublin 4</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609055</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Feanah-Holdings-Limited-609055">Feanah Holdings Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609056</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Flower-Boutique-Roundwood-Limited-609056">Flower Boutique (Roundwood) Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609057</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Unique-Electrical-Limited-609057">Unique Electrical Limited</a></td>
+							<td>Dublin 12</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609058</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Scd-Accountants-Limited-609058">Scd Accountants Limited</a></td>
+							<td>Co Kildare</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609059</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Pack-Of-Rogues-Community-Playgroup-Company-Limited-By-Guarantee-609059">Pack of Rogues Community Playgroup Company Limited By Guarantee</a></td>
+							<td>Co. Clare</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609060</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ranrath-Limited-609060">Ranrath Limited</a></td>
+							<td>Co Wexford</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609061</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Aviator-Ireland-Tap-934-Designated-Activity-Company-609061">Aviator Ireland Tap 934, Designated Activity Company</a></td>
+							<td>Dublin 1</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609062</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Aviator-Ireland-Tap-904-Designated-Activity-Company-609062">Aviator Ireland Tap 904, Designated Activity Company</a></td>
+							<td>Dublin 1</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609063</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Connect-The-Dots-Events-Limited-609063">Connect the Dots Events Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609064</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Honour-Investments-Designated-Activity-Company-609064">Honour Investments Designated Activity Company</a></td>
+							<td>Co Dublin</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609065</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Dublin-City-Farm-And-Ecology-Centre-609065">Dublin City Farm and Ecology Centre</a></td>
+							<td>Dublin 7</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609066</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Amigo-Loans-Ireland-Limited-609066">Amigo Loans Ireland Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609067</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/New-Redwalk-Court-Property-Services-Company-Limited-By-Guarantee-609067">New Redwalk Court Property Services Company Limited By Guarantee</a></td>
+							<td>Co. Galway</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609068</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Stay-Cork-City-Aparthotel-Limited-609068">Stay Cork City Aparthotel Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609069</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Thurles-Community-Enterprise-Projects-Company-Limited-By-Guarantee-609069">Thurles Community Enterprise Projects Company Limited By Guarantee</a></td>
+							<td>Co. Tipperary</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609070</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Vinny-Beirne-Pictures-Limited-609070">Vinny Beirne Pictures Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609071</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Carmelite-Fathers-Community-Employment-Scheme-609071">Carmelite Fathers Community Employment Scheme</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609072</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/The-Down-Syndrome-Centre-North-East-609072">The Down Syndrome Centre North East</a></td>
+							<td>Co. Monaghan</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609073</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/The-Anchorage-Project-Company-Limited-By-Guarantee-609073">The Anchorage Project Company Limited By Guarantee</a></td>
+							<td>Dublin 4</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609074</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Openstem-Consulting-Limited-609074">Openstem Consulting Limited</a></td>
+							<td>Dublin 8</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609075</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Mobile-Medical-Diagnostics-Limited-609075">Mobile Medical Diagnostics Limited</a></td>
+							<td>Co.Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609076</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Complete-Guest-Management-Limited-609076">Complete Guest Management Limited</a></td>
+							<td>Dublin 18</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609077</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Asap-Transport-Limited-609077">Asap Transport Limited</a></td>
+							<td>Co. Tipperary</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609078</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Total-Facades-Limited-609078">Total Facades Limited</a></td>
+							<td>Waterford</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609079</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Atlantic-Imedia-Ventures-Limited-609079">Atlantic Imedia Ventures Limited</a></td>
+							<td>Co. Clare</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609080</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Monadile-Limited-609080">Monadile Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609081</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Teacher-Pats-Playschool-Limited-609081">Teacher Pat's Playschool Limited</a></td>
+							<td>Dublin 12</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609082</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Abjl-Holdings-Limited-609082">Abjl Holdings Limited</a></td>
+							<td>Wicklow</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609083</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Bahlsen-International-Business-Communication-Limited-609083">Bahlsen International Business Communication Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609084</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Print-On-Limited-609084">Print on Limited</a></td>
+							<td>Co. Galway</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609085</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Asia-Aviation-Capital-Ireland-Limited-609085">Asia Aviation Capital Ireland Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609086</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Foxy-Post-Limited-609086">Foxy Post Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609087</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Cs-Devaney-Construction-Limited-609087">CS Devaney Construction Limited</a></td>
+							<td>Co. Sligo</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609088</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Celestial-Financial-Services-Holdings-Designated-Activity-Company-609088">Celestial Financial Services Holdings Designated Activity Company</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609089</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Easo-Obesity-Association-Company-Limited-By-Guarantee-609089">Easo Obesity Association Company Limited By Guarantee</a></td>
+							<td>Dublin 2, D02 N820</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609090</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Dark-Global-Trades-Limited-609090">D.A.R.K. Global Trades Limited</a></td>
+							<td>Longford</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609091</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Proud-Irish-Whiskey-Company-Limited-609091">Proud Irish Whiskey Company Limited</a></td>
+							<td>Dublin 6w, D6w F729</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609092</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/King-Of-Beds-Limited-609092">King of Beds Limited</a></td>
+							<td>Co. Meath</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609093</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Shi-Wang-Yun-Limited-609093">Shi Wang Yun Limited</a></td>
+							<td>Dublin 15</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609094</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Maple-Property-Investments-Limited-609094">Maple Property Investments Limited</a></td>
+							<td>Co Louth</td>
+						</tr>
+						<tr class="dateLine">
+								<td colspan="3"><a id="2457967"></a><h4>1st of August, 2017</h4></td>
+							</tr>
+							<tr class="bootstrap-row-background">
+						<td style="text-align:right">608879</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Glasha-Motorsport-Limited-608879">Glasha Motorsport Limited</a></td>
+							<td>Co. Donegal</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608880</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/My-Divorce-Limited-608880">My Divorce Limited</a></td>
+							<td>Co Kildare</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608881</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Digital-Bainisteoir-Teoranta-608881">Digital Bainisteoir Teoranta</a></td>
+							<td>Co Galway</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608882</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Corcoran-Cqv-Engineering-Services-Limited-608882">Corcoran Cqv Engineering Services Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608883</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Wersec-Limited-608883">Wersec Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608884</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Agile-Controls-Limited-608884">Agile Controls Limited</a></td>
+							<td>Co Galway</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608885</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Certhia-Limited-608885">Certhia Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608886</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Jing-Cai-Xuan-Limited-608886">Jing Cai Xuan Limited</a></td>
+							<td>Co. Tipperary</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608887</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Jdxl-Limited-608887">Jdxl Limited</a></td>
+							<td>Dublin 12</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608888</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Pinder-Engineering-Services-Limited-608888">Pinder Engineering Services Limited</a></td>
+							<td>Dublin 8</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608889</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Cardiowire-Limited-608889">Cardiowire Limited</a></td>
+							<td>Dublin 18</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608890</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Pruune-Consulting-Limited-608890">Pruune Consulting Limited</a></td>
+							<td>Ballymun</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608891</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Peter-Rahill-Engineering-Limited-608891">Peter Rahill Engineering Limited</a></td>
+							<td>Co. Cavan</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608892</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Acs-Aero-1-Alpha-Limited-608892">Acs Aero 1 Alpha Limited</a></td>
+							<td>Dublin 1</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608893</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Wright-Car-Parts-Limited-608893">Wright Car Parts Limited</a></td>
+							<td>Dublin 8</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608894</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Sphere-Media-Limited-608894">Sphere Media Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608895</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Wilko-Productions-Limited-608895">Wilko Productions Limited</a></td>
+							<td>Dublin 3</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608896</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Food-And-Milk-Haven-Teoranta-608896">Food and Milk Haven Teoranta</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608897</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Coymal-Construction-Limited-608897">Coymal Construction Limited</a></td>
+							<td>Co Louth</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608898</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ammar-Dental-Limited-608898">Ammar Dental Limited</a></td>
+							<td>Dublin 15</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608899</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Zengim-Limited-608899">Zengim Limited</a></td>
+							<td>Co. Limerick</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608900</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Eight-Block-Medical-Services-Limited-608900">Eight Block Medical Services Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608901</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Kitchens-By-Virgo-Limited-608901">Kitchens By Virgo Limited</a></td>
+							<td>Co. Meath</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608902</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Alan-Mcgee-Personal-Insolvency-Services-Limited-608902">Alan McGee Personal Insolvency Services Limited</a></td>
+							<td>Co. Cork, P25 Tn12</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608903</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Millhouse-Engineering-Limited-608903">Millhouse Engineering Limited</a></td>
+							<td>Co. Carlow</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608904</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ripley-Court-Owner-Limited-608904">Ripley Court Owner Limited</a></td>
+							<td>Dublin 1</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608905</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Bon-Cortes-Turpin-Trading-Services-Limited-608905">Bon Cortes Turpin Trading Services Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608906</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Loftus-Heritage-Limited-608906">Loftus Heritage Limited</a></td>
+							<td>Co. Wexford</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608907</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/What-Women-Want-Limited-608907">What Women Want Limited</a></td>
+							<td>Co. Kerry</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608908</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Cef-2-Wind-Ireland-Limited-608908">Cef 2 Wind Ireland Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608909</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Sentinel-Management-Accounting-Limited-608909">Sentinel Management Accounting Limited</a></td>
+							<td>Dublin D6w Ye00</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608910</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/The-Yellow-Door-Cafe-Limited-608910">The Yellow Door Cafe Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608911</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Gladstone-Salons-Limited-608911">Gladstone Salons Limited</a></td>
+							<td>Dublin 7</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608912</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Hickeys-Gift-Shop-Limited-608912">Hickeys Gift Shop Limited</a></td>
+							<td>Co. Kerry</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608913</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Bsinergy-Limited-608913">Bsinergy Limited</a></td>
+							<td>Dublin 8</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608914</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/The-Parago-Community-Network-Limited-608914">The Parago Community Network Limited</a></td>
+							<td>Dublin 17</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608915</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ecolodge-Holdings-Limited-608915">Ecolodge Holdings Limited</a></td>
+							<td>Co. Kildare</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608916</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Alayna-Cullen-Limited-608916">Alayna Cullen Limited</a></td>
+							<td>Co. Kildare</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608917</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Sean-Mhuillean-Siamsaiocht-Limited-608917">Sean Mhuillean Siamsaíocht Limited</a></td>
+							<td>Co. Kerry</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608918</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Oryan-Investments-Limited-608918">Oryan Investments Limited</a></td>
+							<td>Limerick</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608919</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Donnybrook-Hotel-Limited-608919">Donnybrook Hotel Limited</a></td>
+							<td>Co. Kerry</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608920</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Acs-Aero-1-Irish-Holdings-Limited-608920">Acs Aero 1 Irish Holdings Limited</a></td>
+							<td>Dublin 1</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608921</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Noor-Consulting-Limited-608921">Noor Consulting Limited</a></td>
+							<td>Galway, H91 Xn82</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608922</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Murray-And-Spelman-Sallins-Limited-608922">Murray & Spelman (Sallins) Limited</a></td>
+							<td>. </td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608923</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Spectrum-Kids-Fitness-Limited-608923">Spectrum Kids Fitness Limited</a></td>
+							<td>Dublin 15</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608924</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Kilmore-Country-Cottages-Limited-608924">Kilmore Country Cottages Limited</a></td>
+							<td>Co. Wexford</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608925</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Yanz-Ventures-Limited-608925">Yanz Ventures Limited</a></td>
+							<td>Co. Meath</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608926</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Brivido-Limited-608926">Brivido Limited</a></td>
+							<td>Dublin 18</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608927</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Kegata-Limited-608927">Kegata Limited</a></td>
+							<td>Galway, H91axk8</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608928</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Tobytech-Consulting-Limited-608928">Tobytech Consulting Limited</a></td>
+							<td>Dublin 13</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608929</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Milestone-Products-Limited-608929">Milestone Products Limited</a></td>
+							<td>Co. Mayo</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608930</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Broadriver-Iii-Ireland-Designated-Activity-Company-608930">Broadriver Iii (Ireland) Designated Activity Company</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608931</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Gerard-Odea-Properties-Limited-608931">Gerard O'Dea Properties Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608932</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Majyk-Equipe-Europe-Limited-608932">Majyk Equipe Europe Limited</a></td>
+							<td>Dublin D07 P4ax</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608933</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Adri-Transport-Limited-608933">Adri Transport Limited</a></td>
+							<td>Co. Louth</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608934</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Realm-Investments-Limited-608934">Realm Investments Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608935</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Catalyst-Pharmaceuticals-Ireland-Limited-608935">Catalyst Pharmaceuticals Ireland, Limited</a></td>
+							<td>Dublin 1</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608936</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Bmsh-Business-Consultancy-Limited-608936">Bmsh Business Consultancy Limited</a></td>
+							<td>Wicklow</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608937</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Nm-Liberty-Limited-608937">Nm Liberty Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608938</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Medrego-Ireland-Limited-608938">Medrego Ireland Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608939</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Mooney-Mechanical-Services-Limited-608939">Mooney Mechanical Services Limited</a></td>
+							<td>Dublin 11</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608940</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Eadine-Hickey-Coaching-Limited-608940">Eadine Hickey Coaching Limited</a></td>
+							<td>Dublin 14</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608941</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Cristatus-Limited-608941">Cristatus Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608942</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Nq-Property-Services-Limited-608942">Nq Property Services Limited</a></td>
+							<td>Co Galway</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608943</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Stephen-Hynes-Agricultural-Consultants-Limited-608943">Stephen Hynes Agricultural Consultants Limited</a></td>
+							<td>Co. Clare</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608944</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Quinns-Quill-Munster-News-Limited-608944">Quinn's Quill Munster News Limited</a></td>
+							<td>Co. Limerick</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608945</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Donita-Nails-And-Beauty-Limited-608945">Donita Nails and Beauty Limited</a></td>
+							<td>Dublin 4</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608946</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Imr-Irish-Material-Recycling-Limited-608946">Imr Irish Material Recycling Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608947</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Advanced-Painting-And-Coatings-Limited-608947">Advanced Painting & Coatings Limited</a></td>
+							<td>Co. Clare</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608948</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Cef-2-Wind-Ireland-Energy-Limited-608948">Cef 2 Wind Ireland Energy Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608949</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Claire-Daly-Consulting-And-Coaching-Limited-608949">Claire Daly Consulting & Coaching Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608950</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Pd-Civils-Limited-608950">Pd Civils Limited</a></td>
+							<td>Co. Meath</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608951</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Pelo-Coffee-Limited-608951">Pelo Coffee Limited</a></td>
+							<td>Co. Galway</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608952</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Aim-Arts-N-Crafts-Limited-608952">Aim Arts N Crafts Limited</a></td>
+							<td>Dublin 18</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608953</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Insureturn-Global-Limited-608953">Insureturn Global Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608954</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Drummersland-Ireland-Limited-608954">Drummersland Ireland Limited</a></td>
+							<td>Dublin 16</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608955</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Scutum-Consulting-Limited-608955">Scutum Consulting Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608956</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Nolan-App-Initiatives-Limited-608956">Nolan App Initiatives Limited</a></td>
+							<td>Galway</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608957</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Icarus-Pandt-Limited-608957">Icarus P&T Limited</a></td>
+							<td>Co. Wexford</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608958</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Jenema-Consultants-Limited-608958">Jenema Consultants Limited</a></td>
+							<td>Limerick</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608959</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Quayside-Bookshop-Limited-608959">Quayside Bookshop Limited</a></td>
+							<td>Sligo</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608960</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Niall-Murphy-Roofing-Limited-608960">Niall Murphy Roofing Limited</a></td>
+							<td>Dublin 18</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608961</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Mardiz-Media-Limited-608961">Mardiz Media Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608962</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Rainbow-Vision-Limited-608962">Rainbow Vision Limited</a></td>
+							<td>Co. Kildare</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608963</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Foy-Sports-Physio-Limited-608963">Foy Sports Physio Limited</a></td>
+							<td>Co Offaly</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608964</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Regital-Limited-608964">Regital Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608965</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Oxilink-Limited-608965">Oxilink Limited</a></td>
+							<td>Co. Kildare</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608966</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Afzal-It-Consulting-Limited-608966">Afzal It Consulting Limited</a></td>
+							<td>Dublin 20</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608967</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Cohsclear-Limited-608967">Cohsclear Limited</a></td>
+							<td>Co. Tipperary</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608968</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Air-Transport-Insurance-Systems-Limited-608968">Air Transport Insurance Systems Limited</a></td>
+							<td>Co. Kildare</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608969</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Maneuver-Limited-608969">Maneuver Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608970</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Piqipi-Limited-608970">Piqipi Limited</a></td>
+							<td>Dublin 1</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608971</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Rituals-Cosmetics-Ireland-Limited-608971">Rituals Cosmetics Ireland Limited</a></td>
+							<td>Carlow</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608972</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Polarsoft-Technologies-Limited-608972">Polarsoft Technologies Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608973</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Grallagh-Farm-Limited-608973">Grallagh Farm Limited</a></td>
+							<td>Co. Tipperary</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608974</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Candw-Senior-Financing-Designated-Activity-Company-608974">C&W Senior Financing Designated Activity Company</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608975</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Golden-Nails-And-Beauty-Limited-608975">Golden Nails and Beauty Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608976</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Roco-Fine-Engineering-Limited-608976">Roco Fine Engineering Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608977</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Gr-Carpentry-Limited-608977">Gr Carpentry Limited</a></td>
+							<td>Galway</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608978</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Trigen-Interiors-Limited-608978">Trigen Interiors Limited</a></td>
+							<td>Dublin 24</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608979</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Mcevoy-Plant-And-Civil-Limited-608979">McEvoy Plant & Civil Limited</a></td>
+							<td>Co. Offaly</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608980</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/New-Brand-Fashions-Limited-608980">New Brand Fashions Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608981</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Breffni-Organics-Limited-608981">Breffni Organics Limited</a></td>
+							<td>Co. Cavan</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608982</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Miloco-Holdings-Limited-608982">Miloco Holdings Limited</a></td>
+							<td>Co. Carlow</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608983</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Pyebawl-And-Company-Limited-608983">Pyebawl and Company Limited</a></td>
+							<td>Co. Kerry</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608984</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Askeaton-Catering-Limited-608984">Askeaton Catering Limited</a></td>
+							<td>Co. Limerick</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608985</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Bizbee-Tech-Limited-608985">Bizbee Tech Limited</a></td>
+							<td>Limerick</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608986</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Gmmog-Limited-608986">Gmmog Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608987</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Business-River-Intelligence-Limited-608987">Business River Intelligence Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608988</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Shragh-Tenens-Limited-608988">Shragh Tenens Limited</a></td>
+							<td>Limerick</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608989</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Linaria-Limited-608989">Linaria Limited</a></td>
+							<td>Co. Louth</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608990</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Conor-Ronan-Offshore-Wind-Limited-608990">Conor Ronan Offshore Wind Limited</a></td>
+							<td>Co. Sligo, F91 Pa43</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608991</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Myrtle-Investments-Limited-608991">Myrtle Investments Limited</a></td>
+							<td>Co. Louth</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608992</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Pmra-Construction-Limited-608992">Pmra Construction Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608993</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Mpg-Killarney-Motors-Limited-608993">Mpg Killarney Motors Limited</a></td>
+							<td>Co. Kerry</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608994</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Js-Silver-Construction-Limited-608994">J.S. Silver Construction Limited</a></td>
+							<td>Co. Galway</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608995</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Knockrobin-Homes-Limited-608995">Knockrobin Homes Limited</a></td>
+							<td>Dublin 8</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608996</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Glencor-Asset-Limited-608996">Glencor Asset Limited</a></td>
+							<td>Co. Kildare</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608997</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Iti-International-Transport-Ireland-Limited-608997">Iti - International Transport Ireland Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608998</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Kinderville-Childcare-And-Afterschool-Limited-608998">Kinderville Childcare and Afterschool Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608999</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Heavylift-Leasing-Limited-608999">Heavylift Leasing Limited</a></td>
+							<td>Co. Louth</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609000</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Master-Auctions-Limited-609000">Master Auctions Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609001</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Rock-Rudge-Limited-609001">Rock Rudge Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609002</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/G-And-C-Resources-Limited-609002">G & C Resources Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609003</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ciun-Healthcare-Granary-Limited-609003">Ciun Healthcare Granary Limited</a></td>
+							<td>Galway</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609004</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Pj-Personnel-Mi-Limited-609004">Pj Personnel (Mi) Limited</a></td>
+							<td>Co. Galway</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609005</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Fly-Aircraft-Holdings-Forty-Limited-609005">Fly Aircraft Holdings Forty Limited</a></td>
+							<td>Co. Dublin, A96 N6t7</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609006</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Fly-Aircraft-Holdings-Thirty-Nine-Limited-609006">Fly Aircraft Holdings Thirty-Nine Limited</a></td>
+							<td>Co. Dublin, A96 N6t7</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609007</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Vitruvio-Limited-609007">Vitruvio Limited</a></td>
+							<td>Dublin 1, D01 X5c2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609008</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Lonehro-Unlimited-Company-609008">Lonehro Unlimited Company</a></td>
+							<td>Co. Galway</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609009</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Burtar-Limited-609009">Burtar Limited</a></td>
+							<td>Co. Monaghan</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609010</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Kutaca-Limited-609010">Kutaca Limited</a></td>
+							<td>Co. Monaghan</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609011</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Tview-Corporate-Nominees-Designated-Activity-Company-609011">Tview Corporate Nominees Designated Activity Company</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609012</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Nippon-Relaxation-Company-Limited-609012">Nippon Relaxation Company Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609013</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Seals-Cave-Services-Limited-609013">Seal's Cave Services Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609014</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Plcc-Food-Limited-609014">Plcc Food Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609015</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Street-Eater-Limited-609015">Street Eater Limited</a></td>
+							<td>Co.Laois</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609016</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Do-Shared-Value-Technologies-Limited-609016">Do Shared Value Technologies Limited</a></td>
+							<td>Dublin 1</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609017</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Xps-Village-Shop-Limited-609017">Xps Village Shop Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609018</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Hqyj-Food-Limited-609018">Hqyj Food Limited</a></td>
+							<td>Dublin 15</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609019</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Tiantian-Kitchen-Limited-609019">Tiantian Kitchen Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609020</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Tea-Craft-Limited-609020">Tea Craft Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">609021</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Golden-Clean-Limited-609021">Golden Clean Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">609022</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Black-Hawk-Security-Services-Limited-609022">Black Hawk Security Services Limited</a></td>
+							<td>Co. Cavan, H14 Y320</td>
+						</tr>
+						<tr class="dateLine">
+								<td colspan="3"><a id="2457966"></a><h4>31st of July, 2017</h4></td>
+							</tr>
+							<tr class="bootstrap-row-background">
+						<td style="text-align:right">608715</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Irish-Primary-Immunodeficiency-Association-Company-Limited-By-Guarantee-608715">Irish Primary Immunodeficiency Association Company Limited By Guarantee</a></td>
+							<td>Co Carlow</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608716</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Candp-Building-Contractors-And-Mainteance-Limited-608716">C&P Building Contractors and Mainteance Limited</a></td>
+							<td>Co. Meath</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608717</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Jb-Binding-Limited-608717">Jb Binding Limited</a></td>
+							<td>Co Limerick</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608718</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Stepaside-Fands-Laundry-Room-Limited-608718">Stepaside F&S Laundry Room Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608719</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Eco-Preschool-Limited-608719">Eco Preschool Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608720</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Leaflet-Direct-Limited-608720">Leaflet Direct Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608721</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Matt-Don-Limited-608721">Matt Don Limited</a></td>
+							<td>Roscommon</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608722</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/A-Game-Changer-Tour-Limited-608722">A Game Changer Tour Limited</a></td>
+							<td>Dublin 3</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608723</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Orangutan-Productions-Limited-608723">Orangutan Productions Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608724</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Foam-Free-Cladding-Limited-608724">Foam Free Cladding Limited</a></td>
+							<td>Co Kildare</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608725</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Longmeadow-Form-Works-Limited-608725">Longmeadow Form Works Limited</a></td>
+							<td>Co. Meath</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608726</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Epg-Consulting-Limited-608726">Epg Consulting Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608727</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/The-Paddock-Bistro-Limited-608727">The Paddock Bistro Limited</a></td>
+							<td>Co. Westmeath</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608728</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Roadbridge-Fcc-Jv-Limited-608728">Roadbridge Fcc Jv Limited</a></td>
+							<td>Limerick</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608729</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Matvei-Building-Services-Limited-608729">Matvei Building Services Limited</a></td>
+							<td>Dublin 15</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608730</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Rocca-Ventures-Car-Park-Limited-608730">Rocca Ventures (Car Park) Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608731</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Naas-Bowling-Limited-608731">Naas Bowling Limited</a></td>
+							<td>Co. Kildare</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608732</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Mjw-Technical-Support-Services-Limited-608732">Mjw Technical Support Services Limited</a></td>
+							<td>Co. Tipperary</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608733</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Wake-Construction-Limited-608733">Wake Construction Limited</a></td>
+							<td>Co. Tipperary</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608734</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Murphy-Agri-Products-Limited-608734">Murphy Agri Products Limited</a></td>
+							<td>Co. Tipperary</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608735</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Viridian-Software-Limited-608735">Viridian Software Limited</a></td>
+							<td>Dublin 9</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608736</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Soul-Max-Int-Limited-608736">Soul Max Int Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608737</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Mortimer-And-Allen-Limited-608737">Mortimer & Allen Limited</a></td>
+							<td>Co. Mayo</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608738</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Crivan-Holdings-Limited-608738">Crivan Holdings Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608739</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Deborlan-Continental-Limited-608739">Deborlan Continental Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608740</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Peaky-And-Co-Barbershop-Limited-608740">Peaky and Co Barbershop Limited</a></td>
+							<td>Dublin 15</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608741</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Willowbee-Retail-Limited-608741">Willowbee Retail Limited</a></td>
+							<td>Dublin 4</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608742</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Labinies-Limited-608742">Labinies Limited</a></td>
+							<td>Dublin 1</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608743</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Cfd-Bespoke-Limited-608743">Cfd Bespoke Limited</a></td>
+							<td>Co. Louth</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608744</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Beyond-Aviation-Solutions-Limited-608744">Beyond Aviation Solutions Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608745</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Lansdowne-Lodge-Developments-Limited-608745">Lansdowne Lodge Developments Limited</a></td>
+							<td>Dublin 4</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608746</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Brae-Media-Limited-608746">Brae Media Limited</a></td>
+							<td>Dublin 3</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608747</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Violet-Aura-Media-Limited-608747">Violet Aura Media Limited</a></td>
+							<td>Dublin 3</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608748</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Hellene-Media-Limited-608748">Hellene Media Limited</a></td>
+							<td>Dublin 3</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608749</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Pux-Media-Limited-608749">Pux Media Limited</a></td>
+							<td>Dublin 3</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608750</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Assured-Services-Construction-And-Civil-Limited-608750">Assured Services Construction & Civil Limited</a></td>
+							<td>Dublin 1</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608751</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ballinduff-Investments-Limited-608751">Ballinduff Investments Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608752</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Kairos-Information-Systems-Limited-608752">Kairos Information Systems Limited</a></td>
+							<td>Co Kildare</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608753</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Thornbury-Pharmaceuticals-Limited-608753">Thornbury Pharmaceuticals Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608754</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Old-Courthouse-Cafe-Limited-608754">Old Courthouse Cafe Limited</a></td>
+							<td>Galway</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608755</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Iliv-Properties-Limited-608755">Iliv Properties Limited</a></td>
+							<td>Co Mayo</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608756</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Rpm-Renovation-Limited-608756">Rpm Renovation Limited</a></td>
+							<td>Dublin 15</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608757</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Grange-Hill-Homes-Limited-608757">Grange Hill Homes Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608758</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Mount-Merrion-Homes-Limited-608758">Mount Merrion Homes Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608759</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/John-Kenny-Consultant-Limited-608759">John Kenny Consultant Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608760</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Brbr-Limited-608760">Brbr Limited</a></td>
+							<td>Co. Kildare</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608761</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Sweet-Connections-Limited-608761">Sweet Connections Limited</a></td>
+							<td>Co. Wicklow</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608762</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Alphabet-Abc-Properties-Limited-608762">Alphabet Abc Properties Limited</a></td>
+							<td>Dublin 17</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608763</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Jj-Costello-Farm-Limited-608763">Jj Costello Farm Limited</a></td>
+							<td>Co. Westmeath</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608764</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Chje-Holdings-Limited-608764">Chje Holdings Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608765</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Beech-Court-Properties-Limited-608765">Beech Court Properties Limited</a></td>
+							<td>County Kildare</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608766</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ata-International-Training-Ireland-Limited-608766">Ata International Training Ireland Limited</a></td>
+							<td>Co. Meath</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608767</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Pentland-Brands-Ireland-Limited-608767">Pentland Brands Ireland Limited</a></td>
+							<td>Dublin 4</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608768</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Propel-Education-Company-Limited-By-Guarantee-608768">Propel Education Company Limited By Guarantee</a></td>
+							<td>Co Clare</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608769</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Clarke-Griffin-Associates-Limited-608769">Clarke Griffin Associates Limited</a></td>
+							<td>Co. Galway</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608770</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Mch-Eastern-Holdings-Limited-608770">McH Eastern Holdings Limited</a></td>
+							<td>Dublin 13</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608771</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Rock-High-Performance-Limited-608771">Rock High Performance Limited</a></td>
+							<td>Galway</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608772</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Carta-Properties-Limited-608772">Carta Properties Limited</a></td>
+							<td>Galway</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608773</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Didactic-Systems-Limited-608773">Didactic Systems Limited</a></td>
+							<td>Dublin18</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608774</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Mcdonald-Agri-Repairs-Limited-608774">McDonald Agri Repairs Limited</a></td>
+							<td>Co. Offaly</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608775</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Silver-City-Catering-Limited-608775">Silver City Catering Limited</a></td>
+							<td>Dublin 16</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608776</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Crossmacole-Construction-Services-Limited-608776">Crossmacole Construction Services Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608777</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/The-T-Works-Translations-Limited-608777">The T Works Translations Limited</a></td>
+							<td>Dublin D07 P4ax</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608778</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Lovely-Leaves-Limited-608778">Lovely Leaves Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608779</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Axis-Real-Estate-Group-Limited-608779">Axis Real Estate Group Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608780</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Gillot-Lamure-Consulting-Limited-608780">Gillot-Lamure Consulting Limited</a></td>
+							<td>Dublin 1</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608781</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Cafe-Marius-Limited-608781">Café Marius Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608782</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Damas-Green-Limited-608782">Damas Green Limited</a></td>
+							<td>Limerick</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608783</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Fibre-Clad-Panels-Limited-608783">Fibre Clad Panels Limited</a></td>
+							<td>Co Kildare</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608784</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Fibre-Clad-Built-Up-Systems-Limited-608784">Fibre Clad Built Up Systems Limited</a></td>
+							<td>Co Kildare</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608785</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Fibre-Clad-Limited-608785">Fibre Clad Limited</a></td>
+							<td>Co Kildare</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608786</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Marcan-Food-Services-Limited-608786">Marcan Food Services Limited</a></td>
+							<td>Co Louth</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608787</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Sm-Chubb-Limited-608787">Sm Chubb Limited</a></td>
+							<td>Dublin 13</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608788</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ctmaor-Limited-608788">Ctmaor Limited</a></td>
+							<td>Co Tipperary</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608789</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Korabec-Limited-608789">Korabec Limited</a></td>
+							<td>Co Tipperary</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608790</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Aor-Pharma-Health-Limited-608790">Aor Pharma Health Limited</a></td>
+							<td>Co Tipperary</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608791</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Contar-Investments-Limited-608791">Contar Investments Limited</a></td>
+							<td>Co Tipperary</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608792</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Foam-Free-Cladding-Systems-Limited-608792">Foam Free Cladding Systems Limited</a></td>
+							<td>Co Kildare</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608793</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Fibre-Clad-Panelling-Systems-Limited-608793">Fibre Clad Panelling Systems Limited</a></td>
+							<td>Co Kildare</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608794</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Fibre-Clad-Panelling-Limited-608794">Fibre Clad Panelling Limited</a></td>
+							<td>Co Kildare</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608795</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Fibre-Clad-Panel-Systems-Limited-608795">Fibre Clad Panel Systems Limited</a></td>
+							<td>Co Kildare</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608796</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Aljazzi-Limited-608796">Aljazzi Limited</a></td>
+							<td>Dublin 18</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608797</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Omelea-Limited-608797">Omelea Limited</a></td>
+							<td>Co. Louth</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608798</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Castlelane-Incident-Consultants-Limited-608798">Castlelane Incident Consultants Limited</a></td>
+							<td>Dublin 9</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608799</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Bliss-Hair-Design-Limited-608799">Bliss Hair Design Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608800</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Sarolusa-Limited-608800">Sarolusa Limited</a></td>
+							<td>Dublin 13, D13 R7w3</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608801</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/J-And-B-Holland-Limited-608801">J & B Holland Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608802</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Lambkin-Software-Engineering-Limited-608802">Lambkin Software Engineering Limited</a></td>
+							<td>Dublin 18</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608803</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Delightful-Bites-Limited-608803">Delightful Bites Limited</a></td>
+							<td>Dublin 12</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608804</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Pink-Pepper-Limited-608804">Pink Pepper Limited</a></td>
+							<td>Co. Meath</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608805</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Busy-Bees-Afterschool-Limited-608805">Busy Bees Afterschool Limited</a></td>
+							<td>Co. Tipperary</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608806</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Chimac-Limited-608806">Chimac Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608807</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Themvar-Holdings-Limited-608807">Themvar Holdings Limited</a></td>
+							<td>Dublin 1</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608808</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Brennanphelan-Real-Estate-Limited-608808">Brennanphelan Real Estate Limited</a></td>
+							<td>Co. Kilkenny</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608809</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Pecunia-Investment-Products-Public-Limited-Company-608809">Pecunia Investment Products Public Limited Company</a></td>
+							<td>Dublin 4</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608810</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Vivalda-Ireland-Limited-608810">Vivalda Ireland Limited</a></td>
+							<td>Dublin 6</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608811</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Coachbook-Limited-608811">Coachbook Limited</a></td>
+							<td>Co. Galway</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608812</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/The-Ryanair-Foundation-608812">The Ryanair Foundation</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608813</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Elsmore-Owners-Management-Company-Limited-By-Guarantee-608813">Elsmore Owners Management Company Limited By Guarantee</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608814</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Blackbird-Grocery-Trading-Limited-608814">Blackbird Grocery Trading Limited</a></td>
+							<td>Co. Limerick</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608815</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Kilbonane-Three-Forts-Limited-608815">Kilbonane Three Forts Limited</a></td>
+							<td>Co. Kerry</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608816</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Samuel-Beckett-Community-Facility-Company-Limited-By-Guarantee-608816">Samuel Beckett Community Facility Company Limited By Guarantee</a></td>
+							<td>Dublin 18</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608817</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Lrjd-Limited-608817">Lrjd Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608818</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Avalon-Internet-Holdings-Limited-608818">Avalon Internet Holdings Limited</a></td>
+							<td>Carlow</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608819</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Venator-Associates-Limited-608819">Venator Associates Limited</a></td>
+							<td>Co. Meath</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608820</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Irish-Subscription-Boxes-Limited-608820">Irish Subscription Boxes Limited</a></td>
+							<td>Co. Galway</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608821</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Zyew-Limited-608821">Zyew Limited</a></td>
+							<td>Co. Galway</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608822</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ccp-Ventures-Limited-608822">Ccp Ventures Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608823</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Kilmurry-Arts-And-Heritage-Centre-Company-Limited-By-Guarantee-608823">Kilmurry Arts & Heritage Centre Company Limited By Guarantee</a></td>
+							<td>Limerick</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608824</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Firebit-Limited-608824">Firebit Limited</a></td>
+							<td>County Galway</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608825</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Mambo-Cafe-Limited-608825">Mambo Cafe Limited</a></td>
+							<td>Dublin 7</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608826</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Red-Qube-Holdings-Limited-608826">Red Qube Holdings Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608827</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/2050-Plasterboard-Recycling-Limited-608827">2050 Plasterboard Recycling Limited</a></td>
+							<td>Dublin 24</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608828</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Swim-Cubs-Limited-608828">Swim Cubs Limited</a></td>
+							<td>Dublin 6w</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608829</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Obr-Bishopstown-Developments-Limited-608829">Obr (Bishopstown) Developments Limited</a></td>
+							<td>Co. Cork Ireland</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608830</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Hbs-Connect-Limited-608830">Hbs Connect Limited</a></td>
+							<td>Wexford</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608831</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Millcourt-Transport-Limited-608831">Millcourt Transport Limited</a></td>
+							<td>Co Laois</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608832</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Turbo-Exchange-Limited-608832">Turbo Exchange Limited</a></td>
+							<td>Co. Kildare</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608833</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Jacobus-Coaches-Limited-608833">Jacobus Coaches Limited</a></td>
+							<td>Co. Kildare</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608834</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Boxco-Investments-Limited-608834">Boxco Investments Limited</a></td>
+							<td>Dublin 24</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608835</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Accolade-Golf-Limited-608835">Accolade Golf Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608836</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Precision-Steam-And-Generation-Services-Limited-608836">Precision Steam and Generation Services Limited</a></td>
+							<td>Co. Donegal</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608837</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Aesthetic-Flooring-Solutions-Limited-608837">Aesthetic Flooring Solutions Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608838</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Providence-House-Management-Company-Limited-By-Guarantee-608838">Providence House Management Company Limited By Guarantee</a></td>
+							<td>Dublin 15</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608839</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Yongfu-Limited-608839">Yongfu Limited</a></td>
+							<td>Co. Wexford</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608840</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ocw-Developments-Limited-608840">Ocw Developments Limited</a></td>
+							<td>Beech Hill Road Clonskeagh Dublin 4</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608841</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Unidale-Developments-Limited-608841">Unidale Developments Limited</a></td>
+							<td>Co. Offaly</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608842</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Intelligent-Devices-Limited-608842">Intelligent Devices Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608843</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Woodview-Contracts-Limited-608843">Woodview Contracts Limited</a></td>
+							<td>Co. Donegal</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608844</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Rochelle-Boutique-Limited-608844">Rochelle Boutique Limited</a></td>
+							<td>Co. Offaly</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608845</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Andromeda-Biotechnology-Limited-608845">Andromeda Biotechnology Limited</a></td>
+							<td>Co. Cork, P81 E021</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608846</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Celtcorp-Asset-Management-Limited-608846">Celtcorp Asset Management Limited</a></td>
+							<td>Dublin 8</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608847</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Dairy-Spares-Limited-608847">Dairy Spares Limited</a></td>
+							<td>Galway</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608848</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Wallslough-Consulting-Limited-608848">Wallslough Consulting Limited</a></td>
+							<td>Kilkenny</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608849</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Green-Carrot-Limited-608849">Green Carrot Limited</a></td>
+							<td>Dublin 6</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608850</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Young-Explorers-Childcare-Limited-608850">Young Explorers (Childcare) Limited</a></td>
+							<td>Sligo</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608851</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Blairscove-Limited-608851">Blairscove Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608852</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Sebastian-And-1-Limited-608852">Sebastian & 1 Limited</a></td>
+							<td>Dublin 4</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608853</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Brickowski-Limited-608853">Brickowski Limited</a></td>
+							<td>Ranelagh Dublin 6</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608854</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Artane-Medical-Limited-608854">Artane Medical Limited</a></td>
+							<td>Dublin 17</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608855</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Dillon-Medical-Limited-608855">Dillon Medical Limited</a></td>
+							<td>Dublin 17</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608856</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Patton-Acquisitions-Limited-608856">Patton Acquisitions Limited</a></td>
+							<td>Dublin 6</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608857</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Odriscoll-Gardens-Limited-608857">O'Driscoll Gardens Limited</a></td>
+							<td>Wicklow</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608858</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ballymoe-Childcare-Development-Group-Company-Limited-By-Guarantee-608858">Ballymoe Childcare Development Group Company Limited By Guarantee</a></td>
+							<td>Co Galway</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608859</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Jp-Madden-Consulting-Limited-608859">Jp Madden Consulting Limited</a></td>
+							<td>Rochestown Cork T12k29n</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608860</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Custom-Accessories-Ireland-Limited-608860">Custom Accessories (Ireland) Limited</a></td>
+							<td>Dublin 1</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608861</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Slainte-Hospitality-Limited-608861">Sláinte Hospitality Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608862</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Cptlgrowth-Limited-608862">Cptlgrowth Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608863</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Dhillon-Truck-Limited-608863">Dhillon Truck Limited</a></td>
+							<td>Dublin 6</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608864</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Lulus-Local-Produce-Limited-608864">Lulu's Local Produce Limited</a></td>
+							<td>Co. Galway</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608865</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Folly-Enterprises-Limited-608865">Folly Enterprises Limited</a></td>
+							<td>Co. Wexford</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608866</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Bkg-Alliance-Limited-608866">Bkg Alliance Limited</a></td>
+							<td>Co. Meath</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608867</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Finatics-Management-Consulting-Services-Limited-608867">Finatics Management Consulting Services Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608868</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Coolykerane-Holdings-Limited-608868">Coolykerane Holdings Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608869</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Rhino-Games-Limited-608869">Rhino Games Limited</a></td>
+							<td>Dublin 6w</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608870</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ortelo-Monread-Limited-608870">Ortelo (Monread) Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608871</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Blue-Themis-Consulting-Limited-608871">Blue Themis Consulting Limited</a></td>
+							<td>Cashel Co. Tipperary</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608872</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Zhao-Chen-Industries-Limited-608872">Zhao Chen Industries Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608873</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/2b-Heard-Audio-Ireland-Limited-608873">2b Heard Audio Ireland Limited</a></td>
+							<td>Dublin 12</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608874</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Alnid-Holdings-Limited-608874">Alnid Holdings Limited</a></td>
+							<td>Cork, T23 Py68</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608875</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Dromatimore-House-Limited-608875">Dromatimore House Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608876</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Kesco-Electrical-Maintenance-Services-Limited-608876">Kesco Electrical Maintenance Services Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608877</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Squareph-Limited-608877">Squareph Limited</a></td>
+							<td>Co. Meath</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608878</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Possess-The-Dress-Limited-608878">Possess the Dress Limited</a></td>
+							<td>Kildare</td>
+						</tr>
+						<tr class="dateLine">
+								<td colspan="3"><a id="2457963"></a><h4>28th of July, 2017</h4></td>
+							</tr>
+							<tr class="bootstrap-row-background">
+						<td style="text-align:right">608650</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Mountside-Partners-Entekra-Limited-608650">Mountside Partners (Entekra) Limited</a></td>
+							<td>Dublin 7</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608651</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Moffett-Investment-Entekra-Unlimited-Company-608651">Moffett Investment (Entekra) Unlimited Company</a></td>
+							<td>Co. Monaghan</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608652</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Foxrock-Investments-Entekra-Limited-608652">Foxrock Investments (Entekra) Limited</a></td>
+							<td>Monaghan</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608653</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Clones-Road-Investments-Entekra-Limited-608653">Clones Road Investments (Entekra) Limited</a></td>
+							<td>Monaghan</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608654</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Laffey-Farming-Limited-608654">Laffey Farming Limited</a></td>
+							<td>Co. Galway</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608655</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Independent-Child-And-Family-Consultancy-Limited-608655">Independent Child and Family Consultancy Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608656</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Lightning-Aviation-Limited-608656">Lightning Aviation Limited</a></td>
+							<td>Dublin D07 P4ax</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608657</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Radon-Ireland-Limited-608657">Radon Ireland Limited</a></td>
+							<td>Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608658</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Finsight-Limited-608658">Finsight Limited</a></td>
+							<td>Dublin 15</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608659</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ballydavid-Construction-Limited-608659">Ballydavid Construction Limited</a></td>
+							<td>Co. Galway</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608660</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Northview-Farm-Limited-608660">Northview Farm Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608661</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Real-Bliss-Hair-Limited-608661">Real Bliss Hair Limited</a></td>
+							<td>Co. Galway</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608662</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Carriage-Media-Marketing-Limited-608662">Carriage Media Marketing Limited</a></td>
+							<td>Co. Kildare</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608663</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Black-Cat-Sealants-Limited-608663">Black Cat Sealants Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608664</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Tara-Templeboy-Aughris-Rural-Action-Company-Limited-By-Guarantee-608664">Tara Templeboy Aughris Rural Action Company Limited By Guarantee</a></td>
+							<td>Co. Sligo</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608665</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Stafford-Commercial-Limited-608665">Stafford Commercial Limited</a></td>
+							<td>Co Wexford</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608666</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Welink-Energy-Iberia-Holdings-Ireland-Limited-608666">Welink Energy Iberia Holdings (Ireland) Limited</a></td>
+							<td>Dublin 18</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608667</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Castilla-Management-Services-Limited-608667">Castilla Management Services Limited</a></td>
+							<td>Dublin 5</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608668</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Park-Avenue-South-Douglas-Residential-Owners-Management-Company-Limited-By-Guarantee-608668">Park Avenue (South Douglas) Residential Owners Management Company Limited By Guarantee</a></td>
+							<td>Dublin D08 C8cn</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608669</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Park-Avenue-South-Douglas-Estate-Management-Company-Limited-By-Guarantee-608669">Park Avenue (South Douglas) Estate Management Company Limited By Guarantee</a></td>
+							<td>Dublin D08 C8cn</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608670</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Rosebrook-Management-Services-Limited-608670">Rosebrook Management Services Limited</a></td>
+							<td>Co Kerry</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608671</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Singh-And-Bhupinder-Co-Limited-608671">Singh & Bhupinder Co. Limited</a></td>
+							<td>Limerick</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608672</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Welink-Spain-Investments-Ireland-Limited-608672">Welink Spain Investments (Ireland) Limited</a></td>
+							<td>Dublin 18</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608673</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Welink-Portugal-Investments-Ireland-Limited-608673">Welink Portugal Investments (Ireland) Limited</a></td>
+							<td>Dublin 18</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608674</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Halcyon-Loan-Advisors-European-Funding-2017-2-Designated-Activity-Company-608674">Halcyon Loan Advisors European Funding 2017-2 Designated Activity Company</a></td>
+							<td>Dublin 1</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608675</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ronayne-Farming-Limited-608675">Ronayne Farming Limited</a></td>
+							<td>Co Mayo</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608676</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Threestand-Property-Investment-Limited-608676">Threestand Property Investment Limited</a></td>
+							<td>Dublin 18</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608677</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Arnage-Group-Limited-608677">Arnage Group Limited</a></td>
+							<td>Dublin 18</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608678</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Viscobond-Limited-608678">Viscobond Limited</a></td>
+							<td>Dublin 12</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608679</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Robespierre-Films-Limited-608679">Robespierre Films Limited</a></td>
+							<td>Dublin 7</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608680</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Inforad-Direct-Limited-608680">Inforad Direct Limited</a></td>
+							<td>Co. Limerick</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608681</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Charleville-Town-Centre-Management-Limited-608681">Charleville Town Centre Management Limited</a></td>
+							<td>Co. Cork</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608682</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Acr-Motors-Castlebar-Limited-608682">Acr Motors Castlebar Limited</a></td>
+							<td>Co. Mayo</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608683</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Professional-Farm-Solutions-Limited-608683">Professional Farm Solutions Limited</a></td>
+							<td>Co Limerick</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608684</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Field-Sales-Performance-Limited-608684">Field Sales Performance Limited</a></td>
+							<td>Kilkenny</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608685</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Davocon-Limited-608685">Davocon Limited</a></td>
+							<td>Co Kerry</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608686</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Kerwood-Investments-Limited-608686">Kerwood Investments Limited</a></td>
+							<td>Co. Wicklow</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608687</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Mfv-Stephanie-Limited-608687">Mfv Stephanie Limited</a></td>
+							<td>Co. Kerry</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608688</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Karma-Thai-Limited-608688">Karma Thai Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608689</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/A-And-A-Courier-Limited-608689">A & a Courier Limited</a></td>
+							<td>Co. Tipperary</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608690</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Conor-Doran-Electrical-Limited-608690">Conor Doran Electrical Limited</a></td>
+							<td>Co. Laois</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608691</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Kerrmech-Heating-Solution-Limited-608691">Kerrmech Heating Solution Limited</a></td>
+							<td>Co. Monaghan</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608692</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Pfmc-Consulting-Limited-608692">Pfmc Consulting Limited</a></td>
+							<td>Dublin 4, D04 Kd60</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608693</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Cheeky-Monkey-Ice-Cream-Limited-608693">Cheeky Monkey Ice Cream Limited</a></td>
+							<td>Co. Meath</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608694</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Home-Advantage-Sports-Limited-608694">Home Advantage Sports Limited</a></td>
+							<td>Co. Clare</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608695</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Food-Stock-Take-Limited-608695">Food Stock Take Limited</a></td>
+							<td>Limerick</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608696</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Jaguar-Land-Rover-Ireland-Services-Limited-608696">Jaguar Land Rover Ireland (Services) Limited</a></td>
+							<td>Dublin 2</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608697</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ctf-Japanese-Limited-608697">Ctf Japanese Limited</a></td>
+							<td>Co. Dublin</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608698</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Kenmart-Construction-Limited-608698">Kenmart Construction Limited</a></td>
+							<td>Co. Mayo</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608699</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Butterfly-Exchange-Agency-Limited-608699">Butterfly Exchange Agency Limited</a></td>
+							<td>Co Louth</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608700</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Smithstown-Food-Services-Limited-608700">Smithstown Food Services Limited</a></td>
+							<td>Co Louth</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608701</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Cervindi-Limited-608701">Cervindi Limited</a></td>
+							<td>Cork, T23 P6h6</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608702</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Atva-Properties-Limited-608702">Atva Properties Limited</a></td>
+							<td>Dublin 4</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608703</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Sleadycastle-Farms-Limited-608703">Sleadycastle Farms Limited</a></td>
+							<td>Co Waterford</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608704</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Senaj-Developments-Limited-608704">Senaj Developments Limited</a></td>
+							<td>Co Wicklow</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608705</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/West-Gate-Bc-Development-Limited-608705">West Gate Bc Development Limited</a></td>
+							<td>Dublin 18</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608706</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Goodstryker-Limited-608706">Goodstryker Limited</a></td>
+							<td>Co Cork</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608707</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Gleelation-Investments-Limited-608707">Gleelation Investments Limited</a></td>
+							<td>Dublin 6</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608708</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Kosama-Scientific-Limited-608708">Kosama Scientific Limited</a></td>
+							<td>Dublin 17</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608709</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Aniar-Aduaidh-Cuideachta-Ghniomhaiochta-Ainmnithe-608709">Aniar Aduaidh Cuideachta Ghníomhaíochta Ainmnithe</a></td>
+							<td>Co. Na Gaillimhe</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608710</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ch-Thoroughbreds-Limited-608710">Ch Thoroughbreds Limited</a></td>
+							<td>Co Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608711</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Klik-Analytics-Limited-608711">Klik Analytics Limited</a></td>
+							<td>Dublin 24</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608712</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Keep-It-Right-Limited-608712">Keep It Right Limited</a></td>
+							<td>Co Dublin</td>
+						</tr>
+						<tr>
+						<td style="text-align:right">608713</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Ir-Ariana-Limited-608713">Ir Ariana Limited</a></td>
+							<td>Kilkenny</td>
+						</tr>
+						<tr class="bootstrap-row-background">
+						<td style="text-align:right">608714</td>
+							<td>
+								<a class="no_arrow" target="_top" rel="nofollow" href="/Company-Info/Lydim-Holdings-Limited-608714">Lydim Holdings Limited</a></td>
+							<td>Dublin 11</td>
+						</tr>
+						</tbody></table><div class="alert alert-success">There are <b>525</b> Company set ups in the above list.</div></div>
+			<div class="col-lg-4">
+				<div id="top-right" style="margin-top: 2%">
+    <div id="barometer" class="col-xs-12" style="padding-left: 0%; padding-right: 0%;">
+	<div class="well well-customised">
+		<h4 class="blue-text"><a href="/Business-Barometer/">Business Barometer</a></h4>
+	</div>
+	<div style="padding-left: 2%; padding-right: 2%; margin-bottom: 2%">
+		<p>Your gateway to the very latest updates from Irish companies.</p>
+		<div class="alert alert-warning">
+			<span class="glyphicon glyphicon-info-sign"></span>&nbsp;<a href="/Business-Barometer/Opt-In-Out/">Receive Free Weekly Updates?</a>
+		</div>
+	</div>
+    </div>
+</div><div class="barometer-label-container"><p class="blue-line-title">Just Appointed:</p></div>
+			<div class="list-group">
+		<a href="/Business-Barometer/Irish-Liquidators/" class="list-group-item">Liquidators Appointed To <span class="badge">29</span></a><a href="/Business-Barometer/Irish-Receivers/" class="list-group-item">E8 Receiver Docs <span class="badge">8</span></a><a href="/Business-Barometer/Irish-Examinerships/" class="list-group-item">Examiners Appointed To <span class="badge">4</span></a></div>
+	<div class="barometer-label-container"><p class="blue-line-title">Upcoming Meetings of Creditors:</p></div>
+			<div class="list-group">
+		<a href="/Business-Barometer/Irish-Meetings-Of-Creditors/" class="list-group-item">To Appoint A Liquidator <span class="badge">9</span></a><a href="/Business-Barometer/Irish-Notices-To-Creditors/" class="list-group-item">Notices To Creditors <span class="badge">1</span></a><a href="/Business-Barometer/Final-Meetings/" class="list-group-item ">Final Meetings <span class="badge">0</span></a></div>
+	<div class="barometer-label-container"><p class="blue-line-title">Court Orders &amp; Petitions:</p></div>
+			<div class="list-group">
+		<a href="/Business-Barometer/Petitions-And-Court-Orders/" class="list-group-item">Petitions &amp; Court Orders <span class="badge">2</span></a></div>
+		<div class="barometer-label-container"><p class="blue-line-title">Recent Judgments:</p></div>
+			<div class="list-group">
+		<a href="/Business-Barometer/Recent-Judgments/" class="list-group-item">Recent Judgments</a>
+		<a href="/Business-Barometer/Recent-Top-10-Judgments/" class="list-group-item">Recent Top 10 Judgments <span class="badge">10</span></a>
+		</div>
+	<div class="barometer-label-container"><p class="blue-line-title">Latest Changes:</p></div>
+		<div class="list-group">
+			<a href="/Business-Barometer/Gazette-Company-Closures/" class="list-group-item">Company Closures <span class="badge">457</span></a>
+<a href="/Business-Barometer/Gazette-New-Companies/" class="list-group-item">New Companies <span class="badge">525</span></a><a href="/Business-Barometer/Gazette-New-Registered-Business-Names/" class="list-group-item">New Businesses <span class="badge">514</span></a><a href="/Business-Barometer/Gazette-Recent-Company-Status-Changes/" class="list-group-item">Status Changes <span class="badge">758</span></a><a href="/Business-Barometer/Gazette-Recent-Credit-Score-Changes/" class="list-group-item">Updated Credit Scores <span class="badge">50</span></a></div>
+		<div class="barometer-label-container"><p class="blue-line-title">Strike Off and Struck Off Companies:</p></div>
+		<div class="list-group">
+			<a href="/Business-Barometer/Gazette-Recent-Strike-Off-Listed-Companies/" class="list-group-item">Strike Off Listed <span class="badge">258</span></a><a href="/Business-Barometer/Gazette-Recent-Struck-Off-Companies/" class="list-group-item ">Struck Off Companies <span class="badge">0</span></a></div>
+	</div></div></div><div class="col-md-12" style="padding-left:0%; padding-right:0%"><div class="well"><div class="row"><div class="col-sm-2"><img class="" src="/assets/img/FreeCreditReport.jpg" alt=""></div><div class="col-sm-10"><h4 class="">Review Your Company's Credit Report Today - For Free!</h4><p class="">Great credit management begins with knowing where your and your customers credit rating is today. Get started with a free Vision-net Credit Report on your company and two of your most important customers.</p><span><a href="/register.jsp" class="btn btn-md btn-info" role="button">Get Started For Free >></a></span></div></div></div></div><div class="col-md-12" style="padding-left:0%; padding-right:0%;"><div class="col-sm-3">
+				<div class="blog bottomRow "><a style="display:block" href="/news/an-average-of-1-900-start-ups-formed-monthly-in-the-first-half-of-2017/"><div class="blog-img"><img src="https://www.vision-net.ie/emails/BlogPost-H1-2017StatsSM.jpg" width="100%" /></div></a><div class="blog-text"><h4 class="blog-header"><a href="/news/an-average-of-1-900-start-ups-formed-monthly-in-the-first-half-of-2017/">An average of 1,900 start-ups formed monthly in the first half of 2017</a></h4><p class="blog-date">17/07/2017</p><p class="blog-content">A breakdown of the key trends affecting Irish companies between January and June 2017
+</p><p class="blog-read-more"><a href="/news/an-average-of-1-900-start-ups-formed-monthly-in-the-first-half-of-2017/">Read More &raquo;</a></p></div></div>
+</div>
+		<div class="col-sm-3">
+				<div class="blog topRow "><a style="display:block" href="/news/is-your-organisation-pep-ready/"><div class="blog-img"><img src="https://www.vision-net.ie/movies/assets/img/blogs/PEP-Compliance-Blog-sm.jpg" width="100%" /></div></a><div class="blog-text"><h4 class="blog-header"><a href="/news/is-your-organisation-pep-ready/">Is Your Organisation PEP ready?</a></h4><p class="blog-date">08/05/2017</p><p class="blog-content">The new 4th Directive on AML is effective this June 2017. Identify PEPs in your customer base faster and easier with our AML solution. 
+</p><p class="blog-read-more"><a href="/news/is-your-organisation-pep-ready/">Read More &raquo;</a></p></div></div>
+</div>
+		<div class="col-sm-3">
+				<div class="blog bottomRow "><a style="display:block" href="/news/monitoring-alerts-101-staying-a-step-ahead/"><div class="blog-img"><img src="https://www.vision-net.ie/movies/assets/img/blogs/BlogAlerts-sm.jpg" width="100%" /></div></a><div class="blog-text"><h4 class="blog-header"><a href="/news/monitoring-alerts-101-staying-a-step-ahead/">Monitoring Alerts 101: Staying A Step Ahead</a></h4><p class="blog-date">25/04/2017</p><p class="blog-content">The Vision-net alerts service is one of the most comprehensive on the market. It takes the cost and time out of monitoring the companies that are important to your business. 
+</p><p class="blog-read-more"><a href="/news/monitoring-alerts-101-staying-a-step-ahead/">Read More &raquo;</a></p></div></div>
+</div>
+		<div class="col-sm-3">
+				<div class="blog topRow "><a style="display:block" href="/news/company-start-ups-remain-strong-with-a-19-increase-this-january/"><div class="blog-img"><img src="https://www.vision-net.ie/movies/assets/img/blogs/Blog-StartUpsStrong-sm.jpg" width="100%" /></div></a><div class="blog-text"><h4 class="blog-header"><a href="/news/company-start-ups-remain-strong-with-a-19-increase-this-january/">Company Start-Ups remain strong with a 19% increase this January</a></h4><p class="blog-date">09/02/2017</p><p class="blog-content">A review of the new Irish companies formed this January and the industry sector's they chose to set up in.
+</p><p class="blog-read-more"><a href="/news/company-start-ups-remain-strong-with-a-19-increase-this-january/">Read More &raquo;</a></p></div></div>
+</div>
+		</div></div><footer class="hidden-print"  >
+	<div class="container">
+		<div class="row">
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+			<h3 class="title">Vision-net.ie</h3>
+			<ul class="list-unstyled">
+			<li><a href="/contactUs.jsp">About Us</a></li>
+			<li><a href="/realTime.jsp">Real-Time Data</a></li>
+<li><a href="/mediaClippings.jsp">Press</a></li>
+<li><a href="/freeServices.jsp">Complimentary Services</a></li>
+			</ul>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+			<h3 class="title">Your Account</h3>
+			<ul class="list-unstyled">
+				<li><a href="https://www.vision-net.ie/loginNoFrame.jsp">Login</a></li>
+					<li><a href="/register.jsp">Sign up</a></li>
+				<li><a href="/topupnli.jsp">Top-Up &amp; Renew</a></li>
+			</ul>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+			<h3 class="title">The Small Print</h3>
+			<ul class="list-unstyled">
+			<li><a href="/FAQ.jsp">FAQ</a></li>
+			<li><a href="/terms.jsp">Terms and Conditions</a></li>
+			<li><a href="/privacy.jsp">Privacy Policy</a></li>
+			</ul>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+			<h3 class="title">Contact Us</h3>
+			<ul class="list-unstyled">
+				<li>
+					
+						VisionNet Limited<br/>
+						Phone: +353 (0)1 664 1111
+					</li>
+			</ul>
+			<h3 class="title">Follow Us</h3>
+			<ul class="list-unstyled">
+				<li>
+					<ul class="list-inline">
+						<li><a href="http://twitter.com/VisionNetLtd" target="_blank"><img src="/assets/img/social-icons/twitter.png" style="width:35px;" alt="Twitter Icon"/></a></li>
+						<li><a href="http://www.linkedin.com/company/vision-net-ltd-" target="_blank"><img src="/assets/img/social-icons/linkedin.png" style="width:35px;" alt="LinkedIn Icon"/></a></li>
+						<li><a href="/rss.jsp"><img alt="RSS" src="/assets/img/social-icons/rss.png" style="width:35px;"></a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		</div>
+		<div class="row">
+			<div class="bottomdiv col-lg-12 col-md-12 col-sm-12">
+			<p class="text-center">&copy; Vision-Net 2017 <span style="padding-right:20px;">Data Updated: 04 Aug 2017</span>
+</p>
+			</div>
+		</div>
+	</div>
+	</footer>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6603293-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1072360708;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1072360708/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">
+_atrk_opts = { atrk_acct:"J3Xfk1acFH008N", domain:"vision-net.ie",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=J3Xfk1acFH008N" style="display:none" height="1" width="1" alt="" /></noscript>
+<script type="text/javascript">
+	(function() {
+		var done = false;
+		var script = document.createElement('script');
+		script.async = true;
+		script.type = 'text/javascript';
+		script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript';
+		document.getElementsByTagName('HEAD').item(0).appendChild(script);
+		script.onreadystatechange = script.onload = function(e) {
+			if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+				var w = new PCWidget({
+					c: '4ba37cf0-7506-4bf0-a9ea-e3c61651fc64',
+					f: true
+				});
+				done = true;
+			}
+		};
+	})();
+</script>
+</body>
+</html>
