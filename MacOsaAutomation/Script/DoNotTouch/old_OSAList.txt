@@ -1,0 +1,4 @@
+OpinionSquare
+PermissionResearch
+PremierOpinion
+KantarResearchMeter

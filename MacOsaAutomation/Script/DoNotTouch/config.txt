@@ -1,0 +1,14 @@
+#=============Do not Touch These Variables==========#
+buildServerLocation=//csvafs01/public/MacMeter/builds
+ossServerLocation=//cviadmsd01/rules-segqa/rules
+ossArchiveToolLocation=//csvafs01/public/MacMeter
+correctTotalFiles=266
+numberOfOSAFiles=5
+chromeFileCount=2
+FFXFileCount=99
+userID=SEG_QA_Automation
+networkPassword=e35eP6QW
+TotalNumberofPassExpected=1532
+TotalNumberofFailExpected=0
+EmailAddress=pbankala@comscore.com
+#====================================================#

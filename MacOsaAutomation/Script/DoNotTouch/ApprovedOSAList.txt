@@ -1,0 +1,7 @@
+RelevantKnowledge
+PremierOpinion
+PermissionResearch
+OpinionSquare
+KantarResearchMeter
+Ipsos_MORI_QVP
+SwissMedia

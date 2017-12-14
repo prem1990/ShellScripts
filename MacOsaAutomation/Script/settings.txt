@@ -1,0 +1,4 @@
+#===User Should Define These Variable before Running The Script==#
+buildVersion=3.0.4.18
+machinePassword=comscore
+#================================================================#
