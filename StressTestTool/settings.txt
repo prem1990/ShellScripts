@@ -1,0 +1,3 @@
+Threads:30
+rkm_ip:10.0.0.190
+In what time intervels you want kill csproxy. ----Example-> If you want to kill csproxy for every 10 minutes----:5
