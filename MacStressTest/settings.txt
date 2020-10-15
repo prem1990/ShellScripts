@@ -1,4 +1,0 @@
-Number:10
-Type<days,hours,minutes>:minutes
-Threads:30
-Urlfile:stress_test_urls.txt

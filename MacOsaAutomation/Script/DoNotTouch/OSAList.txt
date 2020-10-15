@@ -1,5 +1,0 @@
-KantarResearchMeter
-OpinionSquare
-PermissionResearch
-PremierOpinion
-SwissMedia

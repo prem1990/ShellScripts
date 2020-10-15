@@ -1,5 +1,0 @@
-Sum of Gross Count of ATLANTA:23168
-Sum of Conservative count of ATLANTA:23168
-Count of ID's other than ATLANTA is:0
-
-
